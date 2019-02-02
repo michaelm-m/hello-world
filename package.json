@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/michaelm-m/hello-world#readme",
   "dependencies": {
-    "ejs": "^2.6.1",
+    "ejs": "file:node_modules/ejs",
     "express": "^4.16.4"
   }
 }
