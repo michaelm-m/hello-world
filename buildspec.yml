@@ -2,8 +2,6 @@ version: 0.2
 env:
   variables:
     testKey: "value1"
-  parameter-store:
-    testKey: "value2"
 artifacts:
   files:
     - '**/*'
