@@ -19,7 +19,6 @@
   "homepage": "https://github.com/michaelm-m/hello-world#readme",
   "dependencies": {
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "redis": "^2.8.0"
+    "express": "^4.16.4"
   }
 }
