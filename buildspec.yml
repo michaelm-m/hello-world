@@ -2,6 +2,13 @@ version: 0.2
 env:
   variables:
     testKey: "value1"
+phases:
+  pre_build:
+    commands:
+      - mkdir .ebextensions
+      - echo "option_settings:" >> .ebextensions/myconfig.config
+      - echo "  - option_name: CUSTOM_ENV" >> .ebextensions/myconfig.config
+      - echo "    value: testing" >> .ebextensions/myconfig.config
 artifacts:
   files:
     - '**/*'
