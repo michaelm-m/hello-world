@@ -9,8 +9,8 @@ phases:
       - mkdir .ebextensions
       - cd .ebextensions
       - echo "option_settings:" >> myconfig.config
-      - echo "  - option_name:" + "CUSTOM_ENV" >> myconfig.config
-      - echo "value:" + "testing" >> myconfig.config
+      - echo "  - option_name:" "CUSTOM_ENV" >> myconfig.config
+      - echo "    value:" "testing" >> myconfig.config
 artifacts:
   files:
     - '**/*'
