@@ -2,6 +2,8 @@ version: 0.2
 env:
   variables:
     testKey: "value1"
+parameter-store:
+    LOGIN_PASSWORD: /mm/codebuild/test
 phases:
   pre_build:
     commands:
@@ -12,7 +14,7 @@ phases:
       - echo "  - option_name:" "CUSTOM_ENV" >> myconfig.config
       - echo "    value:" "testing" >> myconfig.config
       - echo "  - option_name:" "CUSTOM_ENV2" >> myconfig.config
-      - echo "    value:" $testKey >> myconfig.config
+      - echo "    value:" $LOGIN_PASSWORD >> myconfig.config
 artifacts:
   files:
     - '**/*'
