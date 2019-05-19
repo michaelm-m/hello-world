@@ -11,6 +11,8 @@ phases:
       - echo "option_settings:" >> myconfig.config
       - echo "  - option_name:" "CUSTOM_ENV" >> myconfig.config
       - echo "    value:" "testing" >> myconfig.config
+      - echo "  - option_name:" "CUSTOM_ENV2" >> myconfig.config
+      - echo "    value:" "testing2" >> myconfig.config
 artifacts:
   files:
     - '**/*'
