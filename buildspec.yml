@@ -5,6 +5,7 @@ env:
 phases:
   pre_build:
     commands:
+      - cd $CODEBUILD_SRC_DIR
       - mkdir .ebextensions
       - cd .ebextensions
       - echo "option_settings:" >> myconfig.config
