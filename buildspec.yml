@@ -6,9 +6,10 @@ phases:
   pre_build:
     commands:
       - mkdir .ebextensions
-      - echo "option_settings:" >> .ebextensions/myconfig.config
-      - echo "  - option_name:" + "CUSTOM_ENV" >> .ebextensions/myconfig.config
-      - echo "value:" + "testing" >> .ebextensions/myconfig.config
+      - cd .ebextensions
+      - echo "option_settings:" >> myconfig.config
+      - echo "  - option_name:" + "CUSTOM_ENV" >> myconfig.config
+      - echo "value:" + "testing" >> myconfig.config
 artifacts:
   files:
     - '**/*'
