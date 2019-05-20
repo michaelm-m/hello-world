@@ -2,8 +2,8 @@ version: 0.2
 env:
   variables:
     testKey: "value1"
-parameter-store:
-    LOGIN_PASSWORD: /mm/codebuild/test
+  parameter-store:
+      LOGIN_PASSWORD: /mm/codebuild/test
 phases:
   pre_build:
     commands:
