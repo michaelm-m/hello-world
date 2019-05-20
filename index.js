@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/hello', function (req, res) {
- res.send('*hello there updated : ' + process.env.CUSTOM_ENV2);
+ res.send('*hello-env-dev-2 : ' + process.env.CUSTOM_ENV2 + ' ' + process.env.CUSTOM_ENV);
 });
 
 

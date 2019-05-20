@@ -1,9 +1,9 @@
 version: 0.2
 env:
   variables:
-    testKey: "value1"
+    OTHER_PASSWORD: wings
   parameter-store:
-      LOGIN_PASSWORD: /mm/codebuild/test
+    LOGIN_PASSWORD: /mm/codebuild/test
 phases:
   pre_build:
     commands:
@@ -11,7 +11,7 @@ phases:
       - cd .ebextensions
       - echo "option_settings:" >> myconfig.config
       - echo "  - option_name:" "CUSTOM_ENV" >> myconfig.config
-      - echo "    value:" "testing" >> myconfig.config
+      - echo "    value:" $OTHER_PASSWORD >> myconfig.config
       - echo "  - option_name:" "CUSTOM_ENV2" >> myconfig.config
       - echo "    value:" $LOGIN_PASSWORD >> myconfig.config
 artifacts:
